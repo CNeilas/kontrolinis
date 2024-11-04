@@ -18,7 +18,7 @@ const Registration = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        axios.post("https://mondayexam.onrender.com/api/v1/books", {formData}).then(response => console.log(response)).catch(error => console.log(error.response.data))
+        axios.post("https://mondayexam.onrender.com/api/v1/books", formData).then(response => console.log(response)).catch(error => console.log(error.response.data))
     }
 
   return (
