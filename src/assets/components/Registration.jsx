@@ -7,13 +7,13 @@ const Registration = () => {
         title: "",
         author: "",
         category: "",
-        price: "",
-        cover: ""
+        price: 0,
+        cover: "",
+        reserved: false
     })
 
     const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormData((prevFormData) => ({...prevFormData, [name]: value}))
+        setFormData((prevFormData) => ({...prevFormData, [event.target.name]: event.target.value}))
     }
 
     const handleSubmit = (event) => {
@@ -23,7 +23,7 @@ const Registration = () => {
 
   return (
     <div className="registration">
-      <form className="bookForm" onSubmit={handleSubmit}>
+      <form className="bookForm" action="POST" onSubmit={handleSubmit}>
         <label>Title</label>
         <input type="text" name="title" onChange={handleChange} required/>
         <label>Author</label>
@@ -31,7 +31,7 @@ const Registration = () => {
         <label>Category</label>
         <input type="text" name="category" onChange={handleChange} required/>
         <label>Price</label>
-        <input type="text" name="price" onChange={handleChange} required/>
+        <input type="number" name="price" onChange={handleChange} required/>
         <label>Cover</label>
         <input type="url" name="cover" onChange={handleChange} required/>
         <button type="submit">Submit</button>

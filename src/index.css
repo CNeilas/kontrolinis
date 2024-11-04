@@ -1,6 +1,7 @@
 @import url("/src/assets/styles/nav.css");
 @import url("/src/assets/styles/book.css");
 @import url("/src/assets/styles/bookform.css");
+@import url("/src/assets/styles/footer.css");
 
 * {
   margin: 0;

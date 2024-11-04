@@ -16,8 +16,30 @@
     font-size: 30px;
 }
 
+textarea {
+    width: 500px;
+    height: 100px;
+}
+
 .bookForm input {
     padding: 10px;
     width: 500px;
     border-radius: 20px;
+}
+
+.bookForm button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+.bookForm button:hover {
+    background: gray;
+    cursor: pointer;
+}
+
+.toast {
+    background-color: white;
+    width: 300px;
+    text-align: center;
 }
